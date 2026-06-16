@@ -6,20 +6,23 @@
 - A Python runtime available on the machine
 - Personal skill support enabled in your environment
 
-## Step 1: Place skills in the user profile
+## Step 1: Run the install script
 
-Copy the skills into the personal skills folder:
+The install script copies all skill folders into your personal skills folder and initializes the global context store in one step.
 
-- Linux/macOS: `~/.copilot/skills/`
-- Windows PowerShell: `$HOME/.copilot/skills/`
+#### Linux/macOS
 
-Required skill folders:
+```bash
+bash install.sh
+```
 
-- `context-tooling`
-- `context-resume`
-- `context-checkpoint`
-- `context-focus`
-- `context-maintenance`
+#### Windows PowerShell
+
+```powershell
+.\install.ps1
+```
+
+When prompted, enter a project slug (e.g. `foundry-project`) and a title. The script creates `~/.copilot/skills/` (if it does not exist), copies the five skill directories, and runs `contextctl.py init` for you.
 
 ## Step 2: Create the custom agent in the user profile
 
@@ -31,17 +34,7 @@ The agent should:
 - treat `~/.ai-context` as the source of truth for task-state
 - activate resume, checkpoint, focus, and maintenance skills when relevant
 
-## Step 3: Initialize the first project
-
-Example:
-
-```bash
-python ~/.copilot/skills/context-tooling/scripts/contextctl.py init --project foundry-project --title "Foundry Project"
-```
-
-This initializes the global store and creates a project state file.
-
-## Step 4: Use the system in normal work
+## Step 3: Use the system in normal work
 
 Examples:
 
