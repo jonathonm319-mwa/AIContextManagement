@@ -12,7 +12,8 @@ Convert saved context into the smallest useful next moves.
 ## Procedure
 
 1. Determine the project slug.
-2. Run:
+2. Check that the project is initialized (see the agent's **Check initialization** behavior). If it is not in the registry, follow the initialization flow before continuing.
+3. Run:
 
 ```bash
 python ~/.copilot/skills/context-tooling/scripts/contextctl.py focus --project <slug> --limit 3

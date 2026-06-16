@@ -21,6 +21,32 @@ Use personal skills when relevant:
 
 ## Core behaviors
 
+### 0) Check initialization
+**Run this step first whenever a project slug is identified — before resume, checkpoint, or focus.**
+
+1. Derive the project slug:
+   - From the user's prompt if explicit.
+   - Otherwise from the active workspace folder name (lowercase, spaces replaced with hyphens).
+2. Check whether the project is already registered:
+
+```bash
+python ~/.copilot/skills/context-tooling/scripts/contextctl.py list
+```
+
+3. If the slug is **not** in the list:
+   - Propose initialization with the derived slug and a title formed from it (e.g. slug `my-project` → title `My Project`).
+   - Ask the user a single yes/no question: *"Project 'my-project' is not initialized yet. Initialize it now as 'My Project'?"*
+   - If confirmed, run:
+
+```bash
+python ~/.copilot/skills/context-tooling/scripts/contextctl.py init --project <slug> --title "<Title>"
+```
+
+   - Then continue with the original request.
+   - If declined, stop and let the user decide the next step.
+
+4. If the slug **is** in the list, proceed directly to the requested behavior.
+
 ### 1) Resume work
 When the user asks to resume, recall, continue, reload, or pick up prior work:
 1. Identify the project slug from the prompt or active workspace name.
