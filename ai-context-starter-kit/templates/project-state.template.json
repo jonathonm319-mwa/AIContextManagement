@@ -1,0 +1,28 @@
+{
+  "project": "replace-me",
+  "title": "Replace Me",
+  "task": {
+    "title": "Replace Me",
+    "description": ""
+  },
+  "state": {
+    "completed": [],
+    "in_progress": [],
+    "not_started": []
+  },
+  "decisions": [],
+  "open_questions": [],
+  "next_actions": [],
+  "constraints": [],
+  "references": {
+    "repos": [],
+    "files": [],
+    "docs": []
+  },
+  "mental_model": "",
+  "summary": "",
+  "related_projects": [],
+  "last_updated": "2026-06-16T00:00:00Z",
+  "created": "2026-06-16T00:00:00Z",
+  "history": []
+}
