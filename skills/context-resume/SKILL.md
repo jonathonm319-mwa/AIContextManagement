@@ -15,7 +15,8 @@ Rehydrate a project into an actionable resume packet.
    - Prefer an explicit project name from the prompt.
    - If missing, infer from the active workspace folder name.
    - If still ambiguous, run `list` and show the likely candidates.
-2. Run:
+2. Check that the project is initialized (see the agent's **Check initialization** behavior). If it is not in the registry, follow the initialization flow before continuing.
+3. Run:
 
 ```bash
 python ~/.copilot/skills/context-tooling/scripts/contextctl.py resume --project <slug>

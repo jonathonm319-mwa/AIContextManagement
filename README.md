@@ -18,20 +18,23 @@ This starter kit gives you a **global, git-independent context system** for GitH
 
 ## Install
 
-### 1) Copy skills into your personal skills folder
+### 1) Run the install script
 
-Create the following folders if they do not already exist:
+The install script copies the skills into your personal skills folder and initializes the global context store in one step.
 
-- Linux/macOS: `~/.copilot/skills/`
-- Windows (PowerShell): `$HOME/.copilot/skills/`
+#### Linux/macOS
 
-Copy these directories from this package into your personal skills folder:
+```bash
+bash install.sh
+```
 
-- `skills/context-tooling`
-- `skills/context-resume`
-- `skills/context-checkpoint`
-- `skills/context-focus`
-- `skills/context-maintenance`
+#### Windows PowerShell
+
+```powershell
+.\install.ps1
+```
+
+The script will prompt you for a project slug and title, then set up `~/.ai-context` automatically.
 
 ### 2) Create the custom agent in your VS Code user profile
 
@@ -42,24 +45,6 @@ In VS Code:
 3. Choose **Configure Custom Agents...**
 4. Create a **User profile** agent
 5. Paste the contents of `user-profile-agent/context-orchestrator.agent.md`
-
-### 3) Initialize the global context store
-
-Run one of the following:
-
-#### Linux/macOS
-
-```bash
-python ~/.copilot/skills/context-tooling/scripts/contextctl.py init --project my-first-project --title "My First Project"
-```
-
-#### Windows PowerShell
-
-```powershell
-python $HOME/.copilot/skills/context-tooling/scripts/contextctl.py init --project my-first-project --title "My First Project"
-```
-
-That command creates the base folders under `~/.ai-context` automatically.
 
 ## Suggested prompts
 
