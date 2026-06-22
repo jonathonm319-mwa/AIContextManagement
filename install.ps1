@@ -2,7 +2,8 @@
 $ErrorActionPreference = 'Stop'
 
 $RepoDir = Split-Path -Parent $MyInvocation.MyCommand.Path
-$SkillsSrc = Join-Path $RepoDir 'skills'
+$CollectionDir = Join-Path $RepoDir 'catalog\context-management'
+$SkillsSrc = Join-Path $CollectionDir 'skills'
 $SkillsDest = Join-Path $HOME '.copilot\skills'
 $Script = Join-Path $SkillsDest 'context-tooling\scripts\contextctl.py'
 
@@ -40,6 +41,6 @@ Write-Host '  1. Open Copilot Chat'
 Write-Host '  2. Open the agents dropdown'
 Write-Host "  3. Choose 'Configure Custom Agents...'"
 Write-Host '  4. Create a User profile agent'
-Write-Host "  5. Paste the contents of: $RepoDir\user-profile-agent\context-orchestrator.agent.md"
+Write-Host "  5. Paste the contents of: $CollectionDir\agents\context-orchestrator\context-orchestrator.agent.md"
 Write-Host ''
 Write-Host "Then try: @Context Orchestrator resume work on $ProjectSlug"

@@ -3,7 +3,8 @@
 set -euo pipefail
 
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-SKILLS_SRC="$REPO_DIR/skills"
+COLLECTION_DIR="$REPO_DIR/catalog/context-management"
+SKILLS_SRC="$COLLECTION_DIR/skills"
 SKILLS_DEST="$HOME/.copilot/skills"
 SCRIPT="$SKILLS_DEST/context-tooling/scripts/contextctl.py"
 
@@ -40,6 +41,6 @@ echo "  1. Open Copilot Chat"
 echo "  2. Open the agents dropdown"
 echo "  3. Choose 'Configure Custom Agents...'"
 echo "  4. Create a User profile agent"
-echo "  5. Paste the contents of: $REPO_DIR/user-profile-agent/context-orchestrator.agent.md"
+echo "  5. Paste the contents of: $COLLECTION_DIR/agents/context-orchestrator/context-orchestrator.agent.md"
 echo ""
 echo "Then try: @Context Orchestrator resume work on $PROJECT_SLUG"

@@ -1,6 +1,7 @@
 # AI Context System Documentation Index
 
 This documentation set explains the global AI context system built for persistent, cross-repository working state.
+For marketplace structure and collection navigation, start at the repository [README.md](../README.md).
 
 ## Included documents
 
@@ -15,9 +16,9 @@ This documentation set explains the global AI context system built for persisten
 
 ## Companion assets
 
-This documentation assumes the companion starter kit exists with:
+This documentation assumes the companion Context Management collection exists with:
 
-- A user-profile custom agent
-- Personal skills
+- A user-profile custom agent in `catalog/context-management/agents/`
+- Personal skills in `catalog/context-management/skills/`
 - A lightweight context management script
 - A global store rooted at `~/.ai-context`
